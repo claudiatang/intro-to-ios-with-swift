@@ -1,5 +1,12 @@
 # Intro to iOS App Development with Swift
 
+## Setup
+
+Lets get all the code onto your computer. From the above menu, select the green `Clone or Download` button and select download zip.
+You can use these files throughout todays workshop and beyond.
+
+It might be helpful to keep this page open in your browser to follow along with these instructions in an easy to read format.
+
 ## Activity 1: Swift 101
 
 In this activity we will be working through some exercise in playground files getting you used to the language and syntax of Swift
