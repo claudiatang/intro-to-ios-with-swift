@@ -9,21 +9,21 @@ It might be helpful to keep this page open in your browser to follow along with 
 
 ## Activity 1: Swift 101
 
-In this activity we will be working through some exercise in playground files getting you used to the language and syntax of Swift
+In this activity we will be working through some exercise in playground files getting you used to the language and syntax of Swift. Dont worry if you can't remember all of the basics, you can refer back to [Swift 101.playground](https://github.com/codelikeagirlau/intro-to-ios-with-swift/tree/master/Swift101.playground) at any time.
 
 ### Beginners
 
 If you have never done any programming before, this is the perfect place to start. And don't worry, you are in good hands!
 
-You should start working through the [Constants and Variables.playground]() file. This playground will guide you through using variables and constants as well as getting you used to swift and playgrounds.
+You should start working through the [Constants and Variables.playground](https://github.com/codelikeagirlau/intro-to-ios-with-swift/tree/master/SWIFT%20BASICS/1.%20Constants%20and%20Variables.playground) file. This playground will guide you through using variables and constants as well as getting you used to swift and playgrounds.
 
 There are 10 exercises in total.
 
 ### Some programming experience
 
-If you have done some programming in another language previously, then you can start directly with [Control Flow.playground](). There are 10 exercises in total.
+If you have done some programming in another language previously, then you can start directly with [Control Flow.playground](https://github.com/codelikeagirlau/intro-to-ios-with-swift/tree/master/SWIFT%20BASICS/2.%20Control%20Flow.playground). There are 10 exercises in total.
 
-Once you have completed that, you can then start to work through [Operators.playground] which also has 10 exercises.
+Once you have completed that, you can then start to work through [Operators.playground](https://github.com/codelikeagirlau/intro-to-ios-with-swift/tree/master/SWIFT%20BASICS/3.%20Operators.playground) which also has 10 exercises.
 
 ## Activity 2: Hello Xcode!
 
@@ -61,7 +61,7 @@ When they tap on the 'Next' button, the app will show them the next traffic ligh
 
 1. Open up the starter project file in the folder `StopOrGo` called `StopOrGo.xcodeproj`
 2. In `MainViewController.swift`, create a `IBOutlet` `UIButton` to use for the orange traffic light. Call it `amberTrafficLightButton`.
-3. Once you have created the `amberTrafficLightImageView`, open up `Main.storyboard` and navigate to the `MainViewController`.
+3. Once you have created the `amberTrafficLightButton`, open up `Main.storyboard` and navigate to the `MainViewController`.
 4. There is no UIButton to show our red light. Create a UIButton (copy and paste is ok, just remember to remove any remaining links to other IBOutlets) and link it to the `redTrafficLightButton` declared in our View Controller.
 5. The green light image view is not connected to `greenTrafficLightButton` in `MainViewController` either. Create a connection to it.
 6. Change the text in the UIButton `nextButton` to say "Next"
