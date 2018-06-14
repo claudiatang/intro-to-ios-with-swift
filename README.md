@@ -60,10 +60,10 @@ Using our knowledge of how traffic lights work, we are going to make an app that
 When they tap on the 'Next' button, the app will show them the next traffic light that would appear in the sequence.
 
 1. Open up the starter project file in the folder `StopOrGo` called `StopOrGo.xcodeproj`
-2. In `MainViewController.swift`, create a `IBOutlet` `UIImageView` to use for the orange traffic light. Call it `orangeTrafficLightImageView`.
-3. Once you have created the `orangeTrafficLightImageView`, open up `Main.storyboard` and navigate to the `MainViewController`.
-4. There is no UIImageView to show our red light. Create a UIImageView (copy and paste is ok, just remember to remove any remaining links to other IBOutlets) and link it to the `redTrafficLightImageView` declared in our View Controller.
-5. The green light image view is not connected to `greenTrafficLightImageView` in `MainViewController` either. Create a connection to it.
+2. In `MainViewController.swift`, create a `IBOutlet` `UIButton` to use for the orange traffic light. Call it `amberTrafficLightButton`.
+3. Once you have created the `amberTrafficLightImageView`, open up `Main.storyboard` and navigate to the `MainViewController`.
+4. There is no UIButton to show our red light. Create a UIButton (copy and paste is ok, just remember to remove any remaining links to other IBOutlets) and link it to the `redTrafficLightButton` declared in our View Controller.
+5. The green light image view is not connected to `greenTrafficLightButton` in `MainViewController` either. Create a connection to it.
 6. Change the text in the UIButton `nextButton` to say "Next"
 
 When you have finished, open up the `MainViewController.swift` and check that all the connection outlets are grey for each IBOutlet declared.
@@ -80,6 +80,22 @@ We would like to execute some code when the user taps the 'Next' button, but cur
 
 Now, run the app and tap the next button. If you have successfully linked the button with the action you should see "Next button tapped" print out in the console in the bottom panel of Xcode.
 
+Hint:
+
+`@IBAction func touchedNextButton()`
+
+When the user taps on the next button, we want to highlight the next traffic light that should appear.
+We will need to keep track of the current traffic light colour.
+
+Now that the function is in your code, you can now call this method from inside our `touchedNextButton()`
+function which is triggered by tapping the next button. Replace your `print()` function with the call to `changeSelectedButton()`
+
+Some of your buttons will be missing from the code in `changeSelectedButton()`.
+Read through the code and see if you can add the missing calls to `amberTrafficLightButton` to change its alpha
+depending on the current and next traffic light that will be selected.
+
+Build and run your app. You should now see that when you tap on the next button, the traffic light changes to the next light in the sequence.
+
 ## Activity 5: Group Programming
 
 In this activity we will work together to add in a UINavigationController to our app. This will allow our users to go to different screens and to to back to the home screen.
@@ -90,6 +106,20 @@ If you already have some view controllers in a storyboard, you can easily embed 
 2. Select a view controller
 3. Go to the 'Editor -> Embed In -> Navigation Controller' option
 4. Your navigation controller should now be in your storyboard
+
+### Segues
+
+When asked, add this code to your `MainViewController`:
+
+```
+@IBAction func moreInformationTouched() {
+    performSegue(withIdentifier: "showDetail", sender: self)
+}
+```
+
+This will trigger the next screen to be displayed.
+You will need to change the "showDetail" to whatever identifier you gave your segue in the storyboard.
+Add this as the action when your `moreInformation` button is touched.
 
 ## Activity 6: More features!
 
